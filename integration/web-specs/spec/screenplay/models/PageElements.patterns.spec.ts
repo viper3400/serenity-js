@@ -1,8 +1,8 @@
 import 'mocha';
 
-import { contain, Ensure, equals, includes } from '@serenity-js/assertions';
+import { contain, Ensure, equals, includes, not } from '@serenity-js/assertions';
 import { actorCalled, LogicError } from '@serenity-js/core';
-import { Attribute, By, Navigate, PageElement, PageElements, Text } from '@serenity-js/web';
+import { Attribute, By, isVisible, Navigate, PageElement, PageElements, Text } from '@serenity-js/web';
 import { expect } from '@integration/testing-tools';
 
 /** @test {PageElements} */
@@ -92,6 +92,30 @@ describe('PageElements', () => {
                             ),
                             equals('parent-2')
                         ),
+                    ));
+
+                    it(`ensures that an existing element is visible`, () =>
+                    actorCalled('Peggy').attemptsTo(
+                        Ensure.that(
+                            parents()
+                                .where(Text.ofAll(children()), contain('tea'))
+                                // AND
+                                .where(Text.ofAll(children()), contain('coffee'))
+                                .first(),
+                                isVisible()
+                        ),
+                    ));
+
+                    it(`ensures that element is not visible`, () =>
+                    actorCalled('Peggy').attemptsTo(
+                        Ensure.that(
+                            parents()
+                                .where(Text.ofAll(children()), contain('tea'))
+                                // AND
+                                .where(Text.ofAll(children()), contain('lemonade'))
+                                .first(),
+                                not(isVisible())
+                    ),
                     ));
 
                 it(`complains if the element can't be found`, () =>
