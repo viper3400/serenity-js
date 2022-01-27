@@ -1,8 +1,8 @@
 import 'mocha';
 
-import { contain, Ensure, equals, startsWith } from '@serenity-js/assertions';
+import { contain, Ensure, equals, not, startsWith } from '@serenity-js/assertions';
 import { actorCalled, Answerable, Check, Duration, Log } from '@serenity-js/core';
-import { By, Click, CssClasses, Navigate, Page, PageElement, PageElements, Text, Wait } from '@serenity-js/web';
+import { By, Click, CssClasses, isVisible, Navigate, Page, PageElement, PageElements, Text, Wait } from '@serenity-js/web';
 
 
 class ShoppingList {
@@ -66,6 +66,15 @@ const ItemsLeftToBuy = () =>
 const LinkTo = (item: Answerable<PageElement>) =>
     PageElement.located(By.css('a')).of(item).describedAs('link to element');
 
+const notExistingElement = () =>
+    PageElement.located(By.css('.not-existing-class'))
+        .describedAs('a not existing page element');
+
+const notExistingChild = () =>
+    PageElement.located(By.css('.not-existing-child'))
+        .of(notExistingElement())
+        .describedAs('a not existing child');
+
 /** @test {PageElements} */
 describe('PageElements', () => {
 
@@ -90,6 +99,19 @@ describe('PageElements', () => {
                 Navigate.to('/screenplay/models/page-elements/shopping_list.html'),
                 Ensure.that(ShoppingList.numberOfItemsLeft().text().as(Number), equals(2)),
             ));
+
+        it('can ensure that a page element does not exist', () =>
+            actorCalled('Elle').attemptsTo(
+                Navigate.to('/screenplay/models/page-elements/dynamic_shopping_list_async.html'),
+                Ensure.that(notExistingElement(), not(isVisible())),
+        ));
+
+        it('can ensure that a page element does not exist where parent does not exists as well', () =>
+        actorCalled('Elle').attemptsTo(
+            Navigate.to('/screenplay/models/page-elements/dynamic_shopping_list_async.html'),
+            Ensure.that(notExistingChild(), not(isVisible())),
+    ));
+
 
         it('can handle timeout' , () =>
             actorCalled('Elle').attemptsTo(
