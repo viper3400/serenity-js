@@ -3,8 +3,8 @@ import 'mocha';
 
 import { expect } from '@integration/testing-tools';
 import { contain, Ensure, equals, includes, isPresent, not } from '@serenity-js/assertions';
-import { actorCalled, LogicError } from '@serenity-js/core';
-import { Attribute, By, Navigate, PageElement, PageElements, Text } from '@serenity-js/web';
+import { actorCalled, Log, LogicError } from '@serenity-js/core';
+import { Attribute, By, CssClasses, Enter, Navigate, PageElement, PageElements, Text, Value } from '@serenity-js/web';
 
 import { ExportedPageElements } from './fixtures/ExportedPageElements';
 
@@ -201,5 +201,32 @@ describe('PageElements', () => {
                 );
             });
         });
-    });
+
+        describe('to find a sibling by other sibling and parent', () => {
+            const sectionUnderTest = () => PageElement.located(By.css('[data-test-id="locate-sibling-by-parent-pattern"]'))
+                .describedAs('section under test');
+            
+            const allParents = () => PageElements.located(By.css('.parent'))
+                .of(sectionUnderTest())
+                .describedAs('all parent elements');
+
+            const child = () => PageElement.located(By.css('div'))
+                .of(sectionUnderTest())
+                .describedAs('div element')
+
+            const sibling_2_1 = () => PageElement.located(By.css('.sibling-2-1'))
+            
+            const parentOfSibling_2_1 = () => allParents().where(CssClasses.of(child()), contain('.sibling-2-1'))
+            .first();
+            
+            const inputFieldOfSibling_2_1 = () => PageElement.located(By.css('input')).of(parentOfSibling_2_1());
+
+            it('finds the element', () => actorCalled('Peggy').attemptsTo(
+                Log.the(Text.of(sibling_2_1())),
+                Log.the(Text.of(parentOfSibling_2_1()))
+                /*Enter.theValue('are sweet').into(inputFieldOfSibling_2_1()),
+                Ensure.that(Value.of(inputFieldOfSibling_2_1()), equals('are sweet'))*/
+            ));
+        });
+    });    
 });
