@@ -15,15 +15,19 @@ describe('LastResponse', () => {
     interface Product {
         id: number;
         name: string;
+        description?: string;
+        location?: string;
     }
 
     const
         productList     = '/products',
         productDetails  = '/products/2',
+        bundleDetails   = '/bundle/100',
         orange          = { id: 1, name: 'orange' },
-        apple           = { id: 2, name: 'apple' },
+        apple           = { id: 2, name: 'apple', description: 'a delicious fruit', location: 'fruit bowl' },
+        bundle          = { id: 100, description: 'test', bundle: orange },
         headers         = { 'Content-Type': 'application/json;charset=utf-8' };
-
+        
     describe('when asserting on the response to the last HTTP request', () => {
 
         beforeEach(() => {
@@ -35,6 +39,8 @@ describe('LastResponse', () => {
             }, headers);
 
             mock.onGet(productDetails).reply(200, apple, headers);
+
+            mock.onGet(bundleDetails).reply(200, bundle, headers);
         });
 
         it('enables access to the response status', () =>
@@ -48,6 +54,15 @@ describe('LastResponse', () => {
             actor.attemptsTo(
                 Send.a(GetRequest.to(productDetails)),
                 Ensure.that(LastResponse.body<Product>(), equals(apple)),
+            )
+        );
+
+        it('enables access to the response body if interface contains a property called description or location', () =>
+            actor.attemptsTo(
+                Send.a(GetRequest.to(productDetails)),
+                Ensure.that(LastResponse.body<Product>().name, equals('apple')),
+                Ensure.that(LastResponse.body<Product>().description, equals('a delicious fruit')),
+                Ensure.that(LastResponse.body<Product>().location, equals('fruit bowl')),
             )
         );
 
