@@ -4,11 +4,103 @@
         <title>Serenity/JS changelog</title>
         <link>https://serenity-js.org/changelog</link>
         <description>Keep yourself up-to-date about new features in every release</description>
-        <lastBuildDate>Sat, 10 Jun 2023 20:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 26 Jul 2023 20:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright © 2016-2023 Jan Molak, SmartCode Ltd</copyright>
+        <item>
+            <title><![CDATA[3.7.2]]></title>
+            <link>https://serenity-js.org/changelog/3.7.2</link>
+            <guid>https://serenity-js.org/changelog/3.7.2</guid>
+            <pubDate>Wed, 26 Jul 2023 20:00:00 GMT</pubDate>
+            <description><![CDATA[Summary]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithHideOnScrollNavbar_Yh18" id="summary">Summary<a href="#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary">​</a></h2><p>This release introduces improvements to
+the following Serenity/JS modules:</p><ul><li><a href="/api/core/"><code>@serenity-js/core</code></a></li><li><a href="/api/playwright-test/"><code>@serenity-js/playwright-test</code></a></li></ul><p>Related external tickets: <a href="https://github.com/microsoft/TypeScript/issues/5711" target="_blank" rel="noopener noreferrer">microsoft/TypeScript#5711</a></p><p>View detailed <a href="https://github.com/serenity-js/serenity-js/compare/v3.7.1...v3.7.2" target="_blank" rel="noopener noreferrer">code diff</a> on GitHub</p><h2 class="anchor anchorWithHideOnScrollNavbar_Yh18" id="bug-fixes">Bug Fixes<a href="#bug-fixes" class="hash-link" aria-label="Direct link to Bug Fixes" title="Direct link to Bug Fixes">​</a></h2><ul><li><strong>core:</strong> disabled emitting decorator meta-data (<a href="https://github.com/serenity-js/serenity-js/commit/a0b04258faaa275325112b98a2fb340cd508c007" target="_blank" rel="noopener noreferrer">a0b0425</a>)</li><li><strong>deps:</strong> update dependency fast-glob to ^3.3.1 (<a href="https://github.com/serenity-js/serenity-js/commit/0822973cace7872cfa27e056c8c0276884ac8076" target="_blank" rel="noopener noreferrer">0822973</a>)</li><li><strong>deps:</strong> update playwright dependencies to ^1.36.2 (<a href="https://github.com/serenity-js/serenity-js/commit/f9cc78fb75f431f92ef3788e9ed1e39d18039eac" target="_blank" rel="noopener noreferrer">f9cc78f</a>)</li><li><strong>playwright-test:</strong> simplified exported types, as per <a href="https://github.com/mxschmitt" target="_blank" rel="noopener noreferrer">@mxschmitt</a> suggestion (<a href="https://github.com/serenity-js/serenity-js/commit/94874bae848713523b3513b91551097d6090351a" target="_blank" rel="noopener noreferrer">94874ba</a>), closes <a href="https://github.com/microsoft/playwright/issues/24146" target="_blank" rel="noopener noreferrer">microsoft/playwright#24146</a> <a href="https://github.com/microsoft/TypeScript/issues/5711" target="_blank" rel="noopener noreferrer">microsoft/TypeScript#5711</a></li></ul>]]></content:encoded>
+            <category>core</category>
+            <category>deps</category>
+            <category>playwright-test</category>
+        </item>
+        <item>
+            <title><![CDATA[3.7.1]]></title>
+            <link>https://serenity-js.org/changelog/3.7.1</link>
+            <guid>https://serenity-js.org/changelog/3.7.1</guid>
+            <pubDate>Sat, 22 Jul 2023 20:00:00 GMT</pubDate>
+            <description><![CDATA[Summary]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithHideOnScrollNavbar_Yh18" id="summary">Summary<a href="#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary">​</a></h2><p>This release introduces improvements to
+the following Serenity/JS modules:</p><ul><li><a href="/api/serenity-bdd/"><code>@serenity-js/serenity-bdd</code></a></li></ul><p>View detailed <a href="https://github.com/serenity-js/serenity-js/compare/v3.7.0...v3.7.1" target="_blank" rel="noopener noreferrer">code diff</a> on GitHub</p><h2 class="anchor anchorWithHideOnScrollNavbar_Yh18" id="bug-fixes">Bug Fixes<a href="#bug-fixes" class="hash-link" aria-label="Direct link to Bug Fixes" title="Direct link to Bug Fixes">​</a></h2><ul><li><strong>serenity-bdd:</strong> corrected downloading Serenity BDD jar using HTTP Proxy Agent (<a href="https://github.com/serenity-js/serenity-js/commit/48f79b950b596e124afc415cab4a72279e50b367" target="_blank" rel="noopener noreferrer">48f79b9</a>), closes <a href="https://github.com/serenity-js/serenity-js/issues/1795" target="_blank" rel="noopener noreferrer">#1795</a></li></ul>]]></content:encoded>
+            <category>serenity-bdd</category>
+        </item>
+        <item>
+            <title><![CDATA[3.7.0]]></title>
+            <link>https://serenity-js.org/changelog/3.7.0</link>
+            <guid>https://serenity-js.org/changelog/3.7.0</guid>
+            <pubDate>Thu, 20 Jul 2023 20:00:00 GMT</pubDate>
+            <description><![CDATA[Summary]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithHideOnScrollNavbar_Yh18" id="summary">Summary<a href="#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary">​</a></h2><p>This release addresses <a href="https://github.com/serenity-js/serenity-js/issues/1784" target="_blank" rel="noopener noreferrer">#1784</a> and introduces improvements to
+the following Serenity/JS modules:</p><ul><li><a href="/api/core/"><code>@serenity-js/core</code></a></li><li><a href="/api/playwright/"><code>@serenity-js/playwright</code></a></li><li><a href="/api/protractor/"><code>@serenity-js/protractor</code></a></li><li><a href="/api/web/"><code>@serenity-js/web</code></a></li><li><a href="/api/webdriverio/"><code>@serenity-js/webdriverio</code></a></li></ul><p>View detailed <a href="https://github.com/serenity-js/serenity-js/compare/v3.6.1...v3.7.0" target="_blank" rel="noopener noreferrer">code diff</a> on GitHub</p><h2 class="anchor anchorWithHideOnScrollNavbar_Yh18" id="bug-fixes">Bug Fixes<a href="#bug-fixes" class="hash-link" aria-label="Direct link to Bug Fixes" title="Direct link to Bug Fixes">​</a></h2><ul><li><strong>core:</strong> support for proxying String.replace in QuestionAdapter (<a href="https://github.com/serenity-js/serenity-js/commit/251113d50002f2be175ca8e17466a8c5a8e9418d" target="_blank" rel="noopener noreferrer">251113d</a>)</li><li><strong>deps:</strong> update playwright dependencies to ^1.36.1 (<a href="https://github.com/serenity-js/serenity-js/commit/b86289b3f6d703baa9867ad167502de102591545" target="_blank" rel="noopener noreferrer">b86289b</a>)</li></ul><h2 class="anchor anchorWithHideOnScrollNavbar_Yh18" id="features">Features<a href="#features" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features">​</a></h2><ul><li><strong>playwright:</strong> support for parentElement.closestTo(childElement) API (<a href="https://github.com/serenity-js/serenity-js/commit/cee2c48e63cc8edbfc9daece57e9966f8833beeb" target="_blank" rel="noopener noreferrer">cee2c48</a>), closes <a href="https://github.com/serenity-js/serenity-js/issues/1784" target="_blank" rel="noopener noreferrer">#1784</a></li><li><strong>protractor:</strong> support for parentElement.closestTo(childElement) API (<a href="https://github.com/serenity-js/serenity-js/commit/ec21e18acf670cd090eb5b666e78d29b2943fd61" target="_blank" rel="noopener noreferrer">ec21e18</a>)</li><li><strong>webdriverio:</strong> support for parentElement.closestTo(childElement) API (<a href="https://github.com/serenity-js/serenity-js/commit/ee1b3c47180c384b2109cee3bac43ce7bfaff5e8" target="_blank" rel="noopener noreferrer">ee1b3c4</a>)</li><li><strong>web:</strong> new PageElement Query Language API - parentElement.closestTo(childElement) (<a href="https://github.com/serenity-js/serenity-js/commit/7d48fd8c1dcda6cbd5f8d0579e4cce129b24618f" target="_blank" rel="noopener noreferrer">7d48fd8</a>)</li></ul>]]></content:encoded>
+            <category>core</category>
+            <category>deps</category>
+            <category>playwright</category>
+            <category>protractor</category>
+            <category>web</category>
+            <category>webdriverio</category>
+        </item>
+        <item>
+            <title><![CDATA[3.6.1]]></title>
+            <link>https://serenity-js.org/changelog/3.6.1</link>
+            <guid>https://serenity-js.org/changelog/3.6.1</guid>
+            <pubDate>Tue, 11 Jul 2023 20:00:00 GMT</pubDate>
+            <description><![CDATA[Summary]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithHideOnScrollNavbar_Yh18" id="summary">Summary<a href="#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary">​</a></h2><p>This release introduces improvements to
+the following Serenity/JS modules:</p><ul><li><a href="/api/playwright-test/"><code>@serenity-js/playwright-test</code></a></li></ul><p>View detailed <a href="https://github.com/serenity-js/serenity-js/compare/v3.6.0...v3.6.1" target="_blank" rel="noopener noreferrer">code diff</a> on GitHub</p><h2 class="anchor anchorWithHideOnScrollNavbar_Yh18" id="bug-fixes">Bug Fixes<a href="#bug-fixes" class="hash-link" aria-label="Direct link to Bug Fixes" title="Direct link to Bug Fixes">​</a></h2><ul><li><strong>deps:</strong> update playwright dependencies to ^1.36.0 (<a href="https://github.com/serenity-js/serenity-js/commit/8b6038338b35d04072b166a9b66f63fa24af8dc0" target="_blank" rel="noopener noreferrer">8b60383</a>)</li><li><strong>playwright-test:</strong> ensure activity instantiation location is correct in component tests (<a href="https://github.com/serenity-js/serenity-js/commit/87d59ef7549b12c071c09c103153599e86f74c90" target="_blank" rel="noopener noreferrer">87d59ef</a>), closes <a href="https://github.com/serenity-js/serenity-js/issues/1784" target="_blank" rel="noopener noreferrer">#1784</a></li></ul>]]></content:encoded>
+            <category>deps</category>
+            <category>playwright-test</category>
+        </item>
+        <item>
+            <title><![CDATA[3.6.0]]></title>
+            <link>https://serenity-js.org/changelog/3.6.0</link>
+            <guid>https://serenity-js.org/changelog/3.6.0</guid>
+            <pubDate>Tue, 11 Jul 2023 19:00:00 GMT</pubDate>
+            <description><![CDATA[Summary]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithHideOnScrollNavbar_Yh18" id="summary">Summary<a href="#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary">​</a></h2><p>This release addresses <a href="https://github.com/serenity-js/serenity-js/issues/1784" target="_blank" rel="noopener noreferrer">#1784</a> and introduces improvements to
+the following Serenity/JS modules:</p><ul><li><a href="/api/playwright-test/"><code>@serenity-js/playwright-test</code></a></li><li><a href="/api/web/"><code>@serenity-js/web</code></a></li></ul><p>View detailed <a href="https://github.com/serenity-js/serenity-js/compare/v3.5.0...v3.6.0" target="_blank" rel="noopener noreferrer">code diff</a> on GitHub</p><h2 class="anchor anchorWithHideOnScrollNavbar_Yh18" id="bug-fixes">Bug Fixes<a href="#bug-fixes" class="hash-link" aria-label="Direct link to Bug Fixes" title="Direct link to Bug Fixes">​</a></h2><ul><li><strong>deps:</strong> update dependency https-proxy-agent to ^7.0.1 (<a href="https://github.com/serenity-js/serenity-js/commit/f49b2931ea3944854cd889a031f245b794b22566" target="_blank" rel="noopener noreferrer">f49b293</a>)</li><li><strong>deps:</strong> update dependency https-proxy-agent to ^7.0.1 (<a href="https://github.com/serenity-js/serenity-js/commit/9ea4610563d7ce02ebfc42c5746671c5147cf745" target="_blank" rel="noopener noreferrer">9ea4610</a>)</li><li><strong>deps:</strong> update dependency tiny-types to ^1.20.0 (<a href="https://github.com/serenity-js/serenity-js/commit/6d7bf43c6135968bc90869cb8f9782ed70ca8dd9" target="_blank" rel="noopener noreferrer">6d7bf43</a>)</li></ul><h2 class="anchor anchorWithHideOnScrollNavbar_Yh18" id="features">Features<a href="#features" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features">​</a></h2><ul><li><strong>playwright-test:</strong> enable BrowseTheWebWithPlaywright to reuse an existing page instance (<a href="https://github.com/serenity-js/serenity-js/commit/5c2deb1853f27884fcdaccccc0b1b108c0a8489b" target="_blank" rel="noopener noreferrer">5c2deb1</a>), closes <a href="https://github.com/serenity-js/serenity-js/issues/1784" target="_blank" rel="noopener noreferrer">#1784</a></li><li><strong>playwright-test:</strong> introducing Component Testing with Serenity/JS and Playwright Test (<a href="https://github.com/serenity-js/serenity-js/commit/7b3c6c83d5caa48b4362dee0f30a154f00cb46e2" target="_blank" rel="noopener noreferrer">7b3c6c8</a>), closes <a href="https://github.com/serenity-js/serenity-js/issues/1784" target="_blank" rel="noopener noreferrer">#1784</a></li><li><strong>web:</strong> selectors are comparable and serialisable to JSON (<a href="https://github.com/serenity-js/serenity-js/commit/b2853897e18a1a6693af156844830e8760d1a2b7" target="_blank" rel="noopener noreferrer">b285389</a>), closes <a href="https://github.com/serenity-js/serenity-js/issues/1784" target="_blank" rel="noopener noreferrer">#1784</a></li><li><strong>web:</strong> you can now use Serenity/JS Screenplay Pattern APIs for UI component testing (<a href="https://github.com/serenity-js/serenity-js/commit/3c9aa4b16d223844116ffcb21d23f9cc8b96a793" target="_blank" rel="noopener noreferrer">3c9aa4b</a>), closes <a href="https://github.com/serenity-js/serenity-js/issues/1784" target="_blank" rel="noopener noreferrer">#1784</a></li></ul>]]></content:encoded>
+            <category>deps</category>
+            <category>playwright-test</category>
+            <category>web</category>
+        </item>
+        <item>
+            <title><![CDATA[3.5.0]]></title>
+            <link>https://serenity-js.org/changelog/3.5.0</link>
+            <guid>https://serenity-js.org/changelog/3.5.0</guid>
+            <pubDate>Sun, 02 Jul 2023 20:00:00 GMT</pubDate>
+            <description><![CDATA[Summary]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithHideOnScrollNavbar_Yh18" id="summary">Summary<a href="#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary">​</a></h2><p>This release introduces improvements to
+the following Serenity/JS modules:</p><ul><li><a href="/api/core/"><code>@serenity-js/core</code></a></li></ul><p>View detailed <a href="https://github.com/serenity-js/serenity-js/compare/v3.4.2...v3.5.0" target="_blank" rel="noopener noreferrer">code diff</a> on GitHub</p><h2 class="anchor anchorWithHideOnScrollNavbar_Yh18" id="bug-fixes">Bug Fixes<a href="#bug-fixes" class="hash-link" aria-label="Direct link to Bug Fixes" title="Direct link to Bug Fixes">​</a></h2><ul><li><strong>core:</strong> code clean-up: use type-only TypeScript imports where possible (<a href="https://github.com/serenity-js/serenity-js/commit/aa49150ca7f367363bb6fcc5e054da8bd820825e" target="_blank" rel="noopener noreferrer">aa49150</a>)</li><li><strong>deps:</strong> update dependency @giscus/react to v2.3.0 (<a href="https://github.com/serenity-js/serenity-js/commit/91469559f2bb2e1147b23d7a79fc231e1be7ee93" target="_blank" rel="noopener noreferrer">9146955</a>)</li></ul><h2 class="anchor anchorWithHideOnScrollNavbar_Yh18" id="features">Features<a href="#features" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features">​</a></h2><ul><li><strong>core:</strong> actors can tell the current time (<a href="https://github.com/serenity-js/serenity-js/commit/c52959a877ee920955bdf45ce79fb2c2b5ac0148" target="_blank" rel="noopener noreferrer">c52959a</a>)</li></ul>]]></content:encoded>
+            <category>core</category>
+            <category>deps</category>
+        </item>
+        <item>
+            <title><![CDATA[3.4.2]]></title>
+            <link>https://serenity-js.org/changelog/3.4.2</link>
+            <guid>https://serenity-js.org/changelog/3.4.2</guid>
+            <pubDate>Fri, 30 Jun 2023 20:00:00 GMT</pubDate>
+            <description><![CDATA[Summary]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithHideOnScrollNavbar_Yh18" id="summary">Summary<a href="#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary">​</a></h2><p>This release introduces improvements to
+the following Serenity/JS modules:</p><ul><li><a href="/api/playwright-test/"><code>@serenity-js/playwright-test</code></a></li></ul><p>View detailed <a href="https://github.com/serenity-js/serenity-js/compare/v3.4.1...v3.4.2" target="_blank" rel="noopener noreferrer">code diff</a> on GitHub</p><h2 class="anchor anchorWithHideOnScrollNavbar_Yh18" id="bug-fixes">Bug Fixes<a href="#bug-fixes" class="hash-link" aria-label="Direct link to Bug Fixes" title="Direct link to Bug Fixes">​</a></h2><ul><li><strong>deps:</strong> update dependency fast-glob to ^3.3.0 (<a href="https://github.com/serenity-js/serenity-js/commit/bb00f5e0e916352bc5722064c0bcd97af4e38ab9" target="_blank" rel="noopener noreferrer">bb00f5e</a>)</li><li><strong>playwright-test:</strong> preserve Playwright Test-specific reporting when overriding actors (<a href="https://github.com/serenity-js/serenity-js/commit/8bf0bbb86fd7f6d4f829ff943d3f970b9a960cc4" target="_blank" rel="noopener noreferrer">8bf0bbb</a>)</li></ul>]]></content:encoded>
+            <category>deps</category>
+            <category>playwright-test</category>
+        </item>
+        <item>
+            <title><![CDATA[3.4.1]]></title>
+            <link>https://serenity-js.org/changelog/3.4.1</link>
+            <guid>https://serenity-js.org/changelog/3.4.1</guid>
+            <pubDate>Fri, 23 Jun 2023 20:00:00 GMT</pubDate>
+            <description><![CDATA[Summary]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithHideOnScrollNavbar_Yh18" id="summary">Summary<a href="#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary">​</a></h2><p>This release introduces improvements to
+the internal structure of Serenity/JS.</p><p>View detailed <a href="https://github.com/serenity-js/serenity-js/compare/v3.4.0...v3.4.1" target="_blank" rel="noopener noreferrer">code diff</a> on GitHub</p><h2 class="anchor anchorWithHideOnScrollNavbar_Yh18" id="bug-fixes">Bug Fixes<a href="#bug-fixes" class="hash-link" aria-label="Direct link to Bug Fixes" title="Direct link to Bug Fixes">​</a></h2><ul><li><strong>deps:</strong> update playwright dependencies to ^1.35.1 (<a href="https://github.com/serenity-js/serenity-js/commit/9124e2e33a78ec1cd4c141abfad3f4874e5c3485" target="_blank" rel="noopener noreferrer">9124e2e</a>)</li></ul>]]></content:encoded>
+            <category>deps</category>
+        </item>
         <item>
             <title><![CDATA[3.4.0]]></title>
             <link>https://serenity-js.org/changelog/3.4.0</link>
