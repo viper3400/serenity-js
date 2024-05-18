@@ -3,7 +3,7 @@ import 'mocha';
 import { expect } from '@integration/testing-tools';
 import { endsWith, Ensure, equals } from '@serenity-js/assertions';
 import { actorCalled, TestCompromisedError } from '@serenity-js/core';
-import { By, Navigate, Page, PageElement, Text } from '@serenity-js/web';
+import { By, ById, Click, Navigate, Page, PageElement, Text } from '@serenity-js/web';
 
 describe('Navigate', () => {
 
@@ -105,6 +105,21 @@ describe('Navigate', () => {
 
                 Ensure.that(Text.of(PageElement.located(By.id('h'))), equals('Reloaded')),
             ));
+
+        it.only('allows the actor to reload page with unbeforeReload event', () => {
+            const changeStateButton = PageElement.located(By.id('changeStateBtn'))
+                    .describedAs('button to change page state');
+            const stateLabel = PageElement.located(By.id('state'))
+                    .describedAs('label that displays the page state');
+
+            return actorCalled('Wendy').attemptsTo(
+                Navigate.to('/screenplay/interactions/navigate/before_unload.html'),
+                Ensure.that(Text.of(stateLabel), equals('State: Initial')),
+                Click.on(changeStateButton),
+                Ensure.that(Text.of(stateLabel), equals('State: Changed')),
+                Navigate.reloadPage(),
+                Navigate.to('https://serenity-js.org')
+            )});
 
         it('provides a sensible description of the interaction being performed', () => {
             expect(Navigate.reloadPage().toString())

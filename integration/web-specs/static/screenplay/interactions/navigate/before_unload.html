@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Change Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .state {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .dialog-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+        .dialog-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prevent Reload</h1>
+    <p class="state" id="state">State: Initial</p>
+    <button id="changeStateBtn">Change State</button>
+
+    <div class="dialog-overlay" id="dialogOverlay">
+        <div class="dialog-box">
+            <p>The page was prevented from reloading.</p>
+            <button onclick="closeDialog()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to change the state of the page
+        function changeState() {
+            document.querySelector('.state').textContent = 'State: Changed';
+        }
+
+        // Event listener for the button click
+        document.getElementById('changeStateBtn').addEventListener('click', function() {
+            changeState();
+        });
+
+        // Prompt before reloading
+        window.onbeforeunload = function() {
+            openDialog();
+            return 'Are you sure you want to reload?';
+        };
+
+        // Function to open the dialog
+        function openDialog() {
+            document.getElementById('dialogOverlay').style.display = 'flex';
+        }
+
+        // Function to close the dialog
+        function closeDialog() {
+            document.getElementById('dialogOverlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
